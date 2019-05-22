@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>First Steps in Mel -- Melbourne living area</title>
@@ -53,6 +54,7 @@
 
     .country {
         display: block;
+        font-weight: bold;
     }
 
     #btn{
@@ -89,7 +91,6 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
                         <ul class="nav navbar-nav">
-                            <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li>
                             <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
                                 <ul class="dropdown-menu">
@@ -104,8 +105,8 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
-                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
-                            <li><a href="prediction.php" style="color: black">Prediction</a></li>
+                           <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -139,65 +140,65 @@
                     Melbourne had been voted the world’s most livable city from 2011 to 2018. Even in 2019, Melbourne loses world’s most livable city, but it still is a very attractive city with fantastic quality of life. The local coffee, music, arts, sport, food and their lifestyle always share Melbourne’s passions with the people from all over the world. The lifestyle and culture will make you never want to leave this beautiful city.
                 </p><br>
                 <p class="subTitle">
-                    Multicultural In Melbourne
+                    Multicultural Melbourne
                 </p><br>
                 <p class="article">
                     Melbourne experiences comparatively high levels of migrant integration to the other capital cities, however some foreign ethnic groups are associated with the suburb in which they first settled:
                                   
-                    <a class="country">Afghan</a> with Broadmedows, Dandenong, Dandenong South, Hallam and Hampton Park
-                    <a class="country">Bosnian</a> with Noble Park North, Endeavour Hills, Dandenong and St Albans
-                    <a class="country">British</a> with Mount Eliza, Mornington,Berwick, Beaconsfield, Officer, Mount Martha, Safety Beach and Bangholme (Mornington Peninsula)
-                    <a class="country">Burmese</a> with Albion, Cairnlea and Sunshine North
-                    <a class="country">Cambodian</a> with Springvale South and Springvale
-                    <a class="country">Chinese</a> with CBD, Doncaster East, Doncaster, Clayton, Sunshine North, Glen Waverley, Springvale and Box Hill
-                    <a class="country">Croatian</a> with Altona Meadows, Maribyrnong, Noble Park, Clayton, Dandenong, Noble Park North and North Geelong
-                    <a class="country">Dutch</a> with Ferntree Gully, Park Orchards, Ringwood and Mount Eliza
-                    <a class="country">Egyptians</a> with Broadmeadows, Campbellfield, Taylors Hill and Sydenham
-                    <a class="country">Eritrea</a> with Albanvale and Cairnlea
-                    <a class="country">Ethiopian</a> with Caroline Springs, Sydenham and Burnside
-                    <a class="country">Fijians</a> with Hampton Park and Endeavour Hills
-                    <a class="country">Filipino</a> with Caroline Springs, Burnside, and Cairnlea
-                    <a class="country">French</a> with Caulfield North, Elsternwick, St Kilda East, Glen Iris, Cheltenham and Noble Park North
-                    <a class="country">Greek</a>community of Melbourne with Preston, Thornbury, Northcote, Thomastown, Northcote, Oakleigh, Oakleigh South, Oakleigh East, Clayton South, Noble Park, Rye, Rosebud and interspersed in Northern and Eastern Suburbs
-                    <a class="country">Hungarian</a> with St Kilda East, Caulfield North and Caulfield
-                    <a class="country">ietnamese</a>V with Kings Park, St Albans, Albanvale, Cairnlea, Sunshine North, Sunshine West, Ardeer and Springvale
-                    <a class="country">Indians</a>with Tarneit, Truganina, Dandenong, Clayton, Glen Waverley, Berwick, Beaconsfield, Officer, Laverton, Endeavour Hills, Hampton Park, Narre Warren North Western Suburbs, and South Western Suburbs
-                    <a class="country">Indonesian</a> with CBD and Clayton
-                    <a class="country">Iranian</a> with Doncaster East and Broadmeadows
-                    <a class="country">Iraqis</a> with Roxburgh Park, Coolaroo, Broadmeadows Meadow Heights, Craigieburn and Campbellfield
-                    <a class="country">Irish</a> with Elwood, St Kilda and St Kilda West.
-                    <a class="country">Italian Australians</a>with Carlton, Brunswick, Fawkner, Thomastown, Coburg, Pascoe Vale, Bulleen, Mill Park, Keilor East, Rosebud and Rye and interspersed in the Northwestern and Western suburbs
-                    <a class="country">Japanese</a> community of Melbourne
-                    <a class="country">Jewish</a> with North Caulfield, Caulfield, St Kilda East and South Eastern Suburbs
-                    <a class="country">Koreans</a> with Glen Waverley, Springvale and CBD
-                    <a class="country">Lebanese</a> with Dallas, Craigieburn, Roxburgh Park, Meadow Heights, Broadmeadows, Campbellfield and Fawkner
-                    <a class="country">Macedonian</a> with Thomastown, Lalor, Reservoir, Preston, South Morang and St Albans
-                    <a class="country">Malaysian</a> with CBD, Glen Waverley, Doncaster East, Knox City and Box Hill
-                    <a class="country">Maltese</a> with Altona North, Altona Meadows, Tarneit, Sunshine, St Albans and Airport West
-                    <a class="country">Maori</a> with Hampton Park, Narre Warren South and Tarneit
-                    <a class="country">Middle Eastern</a> with North Western Suburbs
-                    <a class="country">Pakistani</a> with Broadmeadows, Campbellfield Doveton, Dandenong and St Albans
-                    <a class="country">Polish</a> with Caulfield North, Caulfield South, Elsternwick and Bentleigh
-                    <a class="country">Russian</a>with Carnegie, Caulfield North, Caulfield South, Bentleigh and Bentleigh East
-                    <a class="country">Samoan</a> with Cairnlea and Campbellfield
-                    <a class="country">Scottish</a> with Mornington, Mount Martha, Mount Eliza and Frankston South (Mornington Peninsula)
-                    <a class="country">Serbs</a> with Caroline Springs, St Albans, Williams Landing, Hampton Park and Endeavour Hills
-                    <a class="country">Somali and Habesha</a> with Broadmeadows and Heidelberg West
-                    <a class="country">South African</a> with Caulfield North and Caulfield South
-                    <a class="country">Spanish</a> with Fitzroy, Collingwood, Kensington and Flemington
-                    <a class="country">Sri Lankans</a> with Glen Waverley, Endeavour Hills, Craigieburn, Dandenong North, and Dandenong
-                    <a class="country">Sub Saharan African</a> with Caroline Springs, Sydenham and Burnside
-                    <a class="country">Sudanese</a> with Caroline Springs, Sydenham, Broadmeadows and Wyndham Vale
-                    <a class="country">Syrians</a> with Roxburgh Park, Coolaroo, Broadmeadows Meadow Heights, Craigieburn and Campbellfield
-                    <a class="country">Thai</a> with CBD and Sunshine North
-                    <a class="country">Turkish</a> with Broadmeadows, Meadow Heights, Craigieburn, Roxburgh Park, Coolaroo, Dallas and Attwood
+                    <span class="country">Afghan</span> with Broadmedows, Dandenong, Dandenong South, Hallam and Hampton Park
+                    <span class="country">Bosnian</span> with Noble Park North, Endeavour Hills, Dandenong and St Albans
+                    <span class="country">British</span> with Mount Eliza, Mornington,Berwick, Beaconsfield, Officer, Mount Martha, Safety Beach and Bangholme (Mornington Peninsula)
+                    <span class="country">Burmese</span> with Albion, Cairnlea and Sunshine North
+                    <span class="country">Cambodian</span> with Springvale South and Springvale
+                    <span class="country">Chinese</span> with CBD, Doncaster East, Doncaster, Clayton, Sunshine North, Glen Waverley, Springvale and Box Hill
+                    <span class="country">Croatian</span> with Altona Meadows, Maribyrnong, Noble Park, Clayton, Dandenong, Noble Park North and North Geelong
+                    <span class="country">Dutch</span> with Ferntree Gully, Park Orchards, Ringwood and Mount Eliza
+                    <span class="country">Egyptians</span> with Broadmeadows, Campbellfield, Taylors Hill and Sydenham
+                    <span class="country">Eritrea</span> with Albanvale and Cairnlea
+                    <span class="country">Ethiopian</span> with Caroline Springs, Sydenham and Burnside
+                    <span class="country">Fijians</span> with Hampton Park and Endeavour Hills
+                    <span class="country">Filipino</span> with Caroline Springs, Burnside, and Cairnlea
+                    <span class="country">French</span> with Caulfield North, Elsternwick, St Kilda East, Glen Iris, Cheltenham and Noble Park North
+                    <span class="country">Greek</span>community of Melbourne with Preston, Thornbury, Northcote, Thomastown, Northcote, Oakleigh, Oakleigh South, Oakleigh East, Clayton South, Noble Park, Rye, Rosebud and interspersed in Northern and Eastern Suburbs
+                    <span class="country">Hungarian</span> with St Kilda East, Caulfield North and Caulfield
+                    <span class="country">ietnamese</span>V with Kings Park, St Albans, Albanvale, Cairnlea, Sunshine North, Sunshine West, Ardeer and Springvale
+                    <span class="country">Indians</span>with Tarneit, Truganina, Dandenong, Clayton, Glen Waverley, Berwick, Beaconsfield, Officer, Laverton, Endeavour Hills, Hampton Park, Narre Warren North Western Suburbs, and South Western Suburbs
+                    <span class="country">Indonesian</span> with CBD and Clayton
+                    <span class="country">Iranian</span> with Doncaster East and Broadmeadows
+                    <span class="country">Iraqis</span> with Roxburgh Park, Coolaroo, Broadmeadows Meadow Heights, Craigieburn and Campbellfield
+                    <span class="country">Irish</span> with Elwood, St Kilda and St Kilda West.
+                    <span class="country">Italian Australians</span>with Carlton, Brunswick, Fawkner, Thomastown, Coburg, Pascoe Vale, Bulleen, Mill Park, Keilor East, Rosebud and Rye and interspersed in the Northwestern and Western suburbs
+                    <span class="country">Japanese</span> community of Melbourne
+                    <span class="country">Jewish</span> with North Caulfield, Caulfield, St Kilda East and South Eastern Suburbs
+                    <span class="country">Koreans</span> with Glen Waverley, Springvale and CBD
+                    <span class="country">Lebanese</span> with Dallas, Craigieburn, Roxburgh Park, Meadow Heights, Broadmeadows, Campbellfield and Fawkner
+                    <span class="country">Macedonian</span> with Thomastown, Lalor, Reservoir, Preston, South Morang and St Albans
+                    <span class="country">Malaysian</span> with CBD, Glen Waverley, Doncaster East, Knox City and Box Hill
+                    <span class="country">Maltese</span> with Altona North, Altona Meadows, Tarneit, Sunshine, St Albans and Airport West
+                    <span class="country">Maori</span> with Hampton Park, Narre Warren South and Tarneit
+                    <span class="country">Middle Eastern</span> with North Western Suburbs
+                    <span class="country">Pakistani</span> with Broadmeadows, Campbellfield Doveton, Dandenong and St Albans
+                    <span class="country">Polish</span> with Caulfield North, Caulfield South, Elsternwick and Bentleigh
+                    <span class="country">Russian</span>with Carnegie, Caulfield North, Caulfield South, Bentleigh and Bentleigh East
+                    <span class="country">Samoan</span> with Cairnlea and Campbellfield
+                    <span class="country">Scottish</span> with Mornington, Mount Martha, Mount Eliza and Frankston South (Mornington Peninsula)
+                    <span class="country">Serbs</span> with Caroline Springs, St Albans, Williams Landing, Hampton Park and Endeavour Hills
+                    <span class="country">Somali and Habesha</span> with Broadmeadows and Heidelberg West
+                    <span class="country">South African</span> with Caulfield North and Caulfield South
+                    <span class="country">Spanish</span> with Fitzroy, Collingwood, Kensington and Flemington
+                    <span class="country">Sri Lankans</span> with Glen Waverley, Endeavour Hills, Craigieburn, Dandenong North, and Dandenong
+                    <span class="country">Sub Saharan African</span> with Caroline Springs, Sydenham and Burnside
+                    <span class="country">Sudanese</span> with Caroline Springs, Sydenham, Broadmeadows and Wyndham Vale
+                    <span class="country">Syrians</span> with Roxburgh Park, Coolaroo, Broadmeadows Meadow Heights, Craigieburn and Campbellfield
+                    <span class="country">Thai</span> with CBD and Sunshine North
+                    <span class="country">Turkish</span> with Broadmeadows, Meadow Heights, Craigieburn, Roxburgh Park, Coolaroo, Dallas and Attwood
 
                     <br>
                     For more information: <a href="https://en.wikipedia.org/wiki/Demographics_of_Melbourne">https://en.wikipedia.org/wiki/Demographics_of_Melbourne</a>
                 </p>
 
         </section>
-         <a href='sendgrid-php/feedback.php'><button type="button" id="btn" class="" data-button-for="2a8f783514fa91e03666bbb8c444ac4a0b967074" title="Feedback" tabindex="0" style="opacity: 1; visibility: visible;" onmousemove="btnAction()" onmouseout="btnOut()"><i class="mopicon mopicon-commenting-o " icon="fa-commenting-o"><svg viewBox="0 0 28 28"><path d="M10 14c0 1.109-0.891 2-2 2s-2-0.891-2-2 0.891-2 2-2 2 0.891 2 2zM16 14c0 1.109-0.891 2-2 2s-2-0.891-2-2 0.891-2 2-2 2 0.891 2 2zM22 14c0 1.109-0.891 2-2 2s-2-0.891-2-2 0.891-2 2-2 2 0.891 2 2zM14 6c-6.5 0-12 3.656-12 8 0 2.328 1.563 4.547 4.266 6.078l1.359 0.781-0.422 1.5c-0.297 1.109-0.688 1.969-1.094 2.688 1.578-0.656 3.016-1.547 4.297-2.672l0.672-0.594 0.891 0.094c0.672 0.078 1.359 0.125 2.031 0.125 6.5 0 12-3.656 12-8s-5.5-8-12-8zM28 14c0 5.531-6.266 10-14 10-0.766 0-1.531-0.047-2.266-0.125-2.047 1.813-4.484 3.094-7.187 3.781-0.562 0.156-1.172 0.266-1.781 0.344h-0.078c-0.313 0-0.594-0.25-0.672-0.594v-0.016c-0.078-0.391 0.187-0.625 0.422-0.906 0.984-1.109 2.109-2.047 2.844-4.656-3.219-1.828-5.281-4.656-5.281-7.828 0-5.516 6.266-10 14-10v0c7.734 0 14 4.484 14 10z" fill="currentColor"></path></svg></i><span style="writing-mode: vertical-lr; transform: rotate(-180deg);">Feedback</span></button></a>
+         
     </div>
 </body>
 <script type="text/javascript">
@@ -212,6 +213,20 @@ function btnAction(){
 function btnOut(){
   $("#btn").css('right','-10px');
 }
+
+function compareMove(){
+    $("#comparison").html('Compare cost index');
+    $("#comparison").mouseout(function(){
+        $("#comparison").html('Comparsion');
+        })
+    }
+
+  function predictionMove(){
+      $("#prediction").html('Cost Prediction');
+      $("#prediction").mouseout(function(){
+          $("#prediction").html('Prediction');
+      })
+  }
 
 </script>
 

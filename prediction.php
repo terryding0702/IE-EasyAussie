@@ -56,8 +56,8 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                   </ul>
                                 </li>
-                            <li><a href="comparison.html">Comparison</a></li>
-                            <li><a href="prediction.php">Prediction</a></li>
+                            <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
                            <!--  <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
                                 <ul class="dropdown-menu">
@@ -106,6 +106,20 @@
           function btnOut(){
                 $("#btn").css('right','-10px');
             }
+
+          function compareMove(){
+            $("#comparison").html('Compare cost index');
+            $("#comparison").mouseout(function(){
+                $("#comparison").html('Comparsion');
+                })
+        }
+
+          function predictionMove(){
+              $("#prediction").html('Cost Prediction');
+              $("#prediction").mouseout(function(){
+                  $("#prediction").html('Prediction');
+              })
+  }
     </script>
 
 </body>

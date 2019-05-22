@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Student Health - Overseas Student Health Cover (OSHC)</title>
@@ -66,7 +67,7 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
                         <ul class="nav navbar-nav">
-                            <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li>
+                            <!-- <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li> -->
                             <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
                                 <ul class="dropdown-menu">
@@ -81,8 +82,10 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
-                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
-                            <li><a href="prediction.php" style="color: black">Prediction</a></li>
+                            <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
+                            <!-- <li><a href="comparison.html" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" style="color: black">Prediction</a></li> -->
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -116,15 +119,15 @@
                     Saving Money On Eating Home
                 </p><br>
                 <p class="article">
-                    Cooking and eating at home can saving 50% and sometimes even 80% rather than eating out. Therefore, if you can cook and eat at home, you can save a lot of budget on eating. If you don’t know how to cook, it is time to learn. You can download some online recipes or learning from your friends and work out your favorites. You can cook a little bit more as your nest day’s lunch. These meals you cooked always much cheaper than eating out or takeaway. Some useful online recipes in <a href="https://studentrecipes.com/"></a> or <a href="https://www.bbcgoodfood.com/">https://www.bbcgoodfood.com/</a>
+                    Cooking and eating at home can saving 50% and sometimes even 80% rather than eating out. Therefore, if you can cook and eat at home, you can save a lot of budget on eating. If you don not know how to cook, it is time to learn. You can download some online recipes or learning from your friends and work out your favorites. You can cook a little bit more as your next day's lunch. These meals you cooked always much cheaper than eating out or takeaway. Some useful online recipes in <a href="https://studentrecipes.com/"></a> or <a href="https://www.bbcgoodfood.com/">https://www.bbcgoodfood.com/</a>
                 </p>
                 <br>
                 <p class="subTitle">
                     Cheap Shopping For Food
                 </p><br>
                 <p class="article">
-                    <h4 style="font-weight: bold;">Choose Aldi’s </h4>
-                    Coles and Woolworths are the two major supermarkets in Australian, but they are not the cheapest supermarkets. The cheapest supermarket in Austrian is Aldi’s. The cheap level of supermarkets is followed by Aldi’s, Coles and Woolworths and then expensive one is IGA. The different of supermarket on grocery and food expense can be 40% cost difference. You can find your local nearest Aldi’s <a href="https://www.aldi.com.au/en/shopping-at-aldi/store-locations-and-opening-hours/">here</a>
+                    <h4 style="font-weight: bold;">Choose Aldis </h4>
+                    Coles and Woolworths are the two major supermarkets in Australian, but they are not the cheapest supermarkets. The cheapest supermarket in Austrian is Aldis. The cheap level of supermarkets is followed by Aldi, Coles and Woolworths and then expensive one is IGA. The different of supermarket on grocery and food expense can be 40% cost difference. You can find your local nearest Aldis <a href="https://www.aldi.com.au/en/shopping-at-aldi/store-locations-and-opening-hours/">here</a>
                     <br>
                     <h4 style="font-weight: bold;">“Reduced” Items</h4>
                     Sometimes stores will provide some “reduced” perishable products such as meat, deli, bake, fruit and vegetable. These “reduced” products can be half price or sometimes will be less than half price. These item most will be provided at the end of the day, so this is the good time to shopping. 
@@ -148,6 +151,20 @@
     function btnOut(){
       $("#btn").css('right','-10px');
     }
+
+     function compareMove(){
+        $("#comparison").html('Compare cost index');
+        $("#comparison").mouseout(function(){
+            $("#comparison").html('Comparsion');
+            })
+        }
+
+      function predictionMove(){
+          $("#prediction").html('Cost Prediction');
+          $("#prediction").mouseout(function(){
+              $("#prediction").html('Prediction');
+          })
+      }
 </script>
 
 </html>

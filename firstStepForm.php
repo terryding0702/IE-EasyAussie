@@ -66,7 +66,7 @@
         <div>
             <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white; color: white; border: 1px solid rgb(224,227,230);box-shadow: 4px 4px 20px lightblue; width: 98%; margin:auto;">
                 <div class="container col-md-12">
-                    <div class="navbar-header col-md-5" style="height: 62px; margin-left: -10px;">
+                    <div class="navbar-header col-md-4.5" style="height: 62px; margin-left: -10px;">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" value="click here to start" style="background-color: black; width: 40px;height: 40px; text-align: center;">
                         </button>
                         <!-- <a class="navbar-brand active" href="http://www.firststepsinmel.ml/" ><img src="img/logoBtn.png" style="width:50%;margin-top: -16px;"></a>
@@ -74,12 +74,12 @@
                         <a class="navbar-brand" href="http://www.firststepsinmel.ml/" ><img src="img/webLogo3.png" style="display: inline; height: 43px; margin-top: -10px;">
                          <span class="hidden-sm-down hidden-xs" style="font-family: 'Arial Black';font-size: 24px;color:black; height: 20px; line-height: 20px;margin-left: 10px;">First Steps in Melbourne</span></a>
                     </div>
-                    <div id="navbar" class="navbar-collapse collapse col-md-7" style="margin-top: 3px; margin-left: -10px;">
+                    <div id="navbar" class="navbar-collapse collapse col-md-7.5" style="margin-top: 3px; margin-left: -10px;">
                         <ul class="nav navbar-nav" >
-                            <li><a href="http://www.firststepsinmel.ml/">Home</a></li>
+                            <!-- <li><a href="http://www.firststepsinmel.ml/" style="font-size: 14px;">Home</a></li> -->
                             <!-- <li><a href="introduction.php">Living Cost Calculator</a></li> -->
                             <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black; font-size: 14px;" id="costFont" ><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="introduction.php">Calculator</a></li>
                                     <li><a href="Bills.php">Other expenses</a></li>
@@ -88,14 +88,14 @@
 
                             <!-- <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a></li> -->
                             <li class="dropdown" id="subSupDrag" onclick="calculatorDrag()">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="stuSup"><span class="caret"></span>&nbsp;&nbsp;Student Support</a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;font-size: 14px;" id="stuSup"><span class="caret"></span >&nbsp;&nbsp;Student Support</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Find a Suburb</a></li>
                                     <li><a href="TipsList.html">Guidance</a></li>
                                   </ul>
                                 </li>
-                           <!--  <li><a href="comparison.html">Comparison</a></li> -->
-                            <li><a href="prediction.php">Prediction</a></li>
+                            <li><a href="comparison.html" id="comparison" style="font-size: 14px;" onmousemove="compareMove()">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="font-size: 14px;">Prediction</a></li>
                            <!--  <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
                                 <ul class="dropdown-menu">
@@ -478,6 +478,8 @@ $(document).ready(function() {
 
 })
 
+
+
 // function getSuggestion(str){
 //   if (str.length == 0) {
 //       document.getElementById('hint').innerHTML = '';
@@ -540,6 +542,7 @@ function evalSlider() {
     var day = document.getElementById("formControlRange").value;
     document.getElementById("dayOutput").innerHTML = day + ' Times per week.';
 }
+
 
 function getHelp() {
     if (currentTab == 0) {
@@ -615,6 +618,21 @@ function btnAction(){
 function btnOut(){
   $("#btn").css('right','-10px');
 }
+
+function compareMove(){
+    $("#comparison").html('Compare cost index');
+    $("#comparison").mouseout(function(){
+        $("#comparison").html('Comparsion');
+    })
+}
+
+function predictionMove(){
+    $("#prediction").html('Cost Prediction');
+    $("#prediction").mouseout(function(){
+        $("#prediction").html('Prediction');
+    })
+}
+
 </script>
 
 </html>

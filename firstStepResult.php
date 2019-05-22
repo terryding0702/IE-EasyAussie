@@ -130,14 +130,14 @@
         var classSel = $('#proFood');
         if ('<?php echo $vegan; ?>' === 'vegan') {
             foodPrice = (numOfDay * 12 + (14 - numOfDay) * 7 + 7 * 2.5) * 0.8;
-            var totalCostShow = "$" + foodPrice;
+            var totalCostShow = "$" + foodPrice.toFixed(2);
             //console.log(classSel);
             totalCostPer = foodPrice / 200 * 100 + "%";
             classSel.html(totalCostShow);
             classSel.css("width", totalCostPer);
         } else {
             foodPrice = (numOfDay * 12 + (14 - numOfDay) * 7 + 7 * 2.5);
-            var totalCostShow = "$" + foodPrice;
+            var totalCostShow = "$" + foodPrice.toFixed(2);
             console.log(classSel);
             totalCostPer = foodPrice / 200 * 100 + "%";
             classSel.html(totalCostShow);
@@ -150,7 +150,7 @@
         // console.log(foodPrice);
         var totalShow = $(".span1");
         //totalShow.html('Your total cost of living: $' + totalCost);
-        $('#costShow').html('$' + totalCost);
+        $('#costShow').html('$' + totalCost.toFixed(2));
     });
 
     //Accommodtion Cost function
@@ -297,10 +297,11 @@
         </button>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav" style="margin-left:20px;">
-                <li><a href="http://www.firststepsinmel.ml">Home</a></li>
-                <li><a href="introduction.php">Living Cost Calculator</a></li>
-                <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
-                <li><a href="comparison.html">Comparison</a></li>
+                <!-- <li><a href="http://www.firststepsinmel.ml">Home</a></li> -->
+                <li><a style="font-size: 15px;" href="introduction.php">Living Cost Calculator</a></li>
+                <li><a style="font-size: 15px;" href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
+                 <li><a href="comparison.html" id="comparison" style="font-size: 15px;" onmousemove="compareMove()">Comparison</a></li>
+                <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="font-size: 15px;">Prediction</a></li>
                 <!--       <li><a href="#pred">Prediction</a></li>
                             <li><a href="#about">About us</a></li> -->
                 <!-------------------------------------------------------------->
@@ -308,8 +309,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="active"><a href="introduction.php" style="text-decoration: none;">Living Cost Calculator</a></li>
-                        <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/recommendation/">Student Support</a></li>
-                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
+                        <li><a href="comparison.html" id="comparison" style="font-size: 14px;" onmousemove="compareMove()">Comparison</a></li>
+                        <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="font-size: 14px;">Prediction</a></li>
                         <!--             <li><a href="#">Prediction</a></li>
                                     <li><a href="#">About us</a></li> -->
                     </ul>
@@ -328,8 +330,6 @@
                 <span style="font-size: 18px; line-height: 50%"> (per week)</span>
             </div>
         </div>
-        <!--jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj-->
-        <!-- <div id="float"><img id="floatImg" src="img/feedback2.jpg" style="width:30%; height:30%; border-radius: 40%; z-index: 1; position: relative; opacity: 0.3"></div> -->
         <div class="table">
             <table>
                 <tr>
@@ -372,6 +372,11 @@
                 </tr>
             </table>
         </div>
+        <div class="col-md-12" style="margin-top: -50px; margin-bottom: 10px; text-align: center;">
+            <span>Want to know your other expenses? </span>
+            <span><a href="Bills.php" style="font-weight: bold;">Click Here</a></span>
+        </div>
+        <p></p>
         <div class="recommendation" style="height: 300px;width: 100%;text-align:center;">
             <div>
                 <div class="col-xs-12">
@@ -450,6 +455,21 @@
         });
         </script> -->
 </body>
+<script type="text/javascript">
+    function compareMove(){
+    $("#comparison").html('Compare cost index');
+    $("#comparison").mouseout(function(){
+        $("#comparison").html('Comparsion');
+        })
+    }
+
+    function predictionMove(){
+        $("#prediction").html('Cost Prediction');
+        $("#prediction").mouseout(function(){
+            $("#prediction").html('Prediction');
+        })
+    }
+</script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Student Health - Overseas Student Health Cover (OSHC)</title>
@@ -68,7 +69,7 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
                         <ul class="nav navbar-nav">
-                            <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li>
+                            <!-- <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li> -->
                             <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
                                 <ul class="dropdown-menu">
@@ -83,8 +84,8 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
-                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
-                            <li><a href="prediction.php" style="color: black">Prediction</a></li>
+                            <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -112,7 +113,7 @@
         <section class="main">
             <article class="content_body">
                 <p class="article">
-                    In Melbourne, the immigration from all over the world leads the unique and diversity of food culture. High quality level of food service brings the sparking of Melbourne’s retreatant. In addition, you can find the best retreatant in Melbourne that bring the best local food from all over the world. If you love coffee, this city offers lots of great coffee shop with best coffee beans rosters. I’s time to celebrating the diverse of multicultural Melbourne.
+                    In Melbourne, the immigrations from all over the world lead the unique and diversity of food culture. High quality level of food service brings the sparking of Melbourne’s retreatant. In addition, you can find the best retreatant in Melbourne that bring the best local food from all over the world. If you love coffee, this city offers lots of great coffee shop with best coffee beans rosters. I’s time to celebrating the diverse of multicultural Melbourne.
                 </p><br>
                 <p class="subTitle">
                     Saving money on Eating Out
@@ -135,17 +136,30 @@
     </div>
 </body>
 <script type="text/javascript">
-function calculatorDrag() {
-    $("#costFont").css('background-color', "white");
-    $("#stuSup").css('background-color', "white");
-    $("#preSup").css('background-color', "white");
-}
-function btnAction(){
-      $("#btn").css('right','0px');
-    }
-function btnOut(){
-      $("#btn").css('right','-10px');
-    }
+        function calculatorDrag() {
+            $("#costFont").css('background-color', "white");
+            $("#stuSup").css('background-color', "white");
+            $("#preSup").css('background-color', "white");
+        }
+        function btnAction(){
+              $("#btn").css('right','0px');
+            }
+        function btnOut(){
+              $("#btn").css('right','-10px');
+            }
+     function compareMove(){
+        $("#comparison").html('Compare cost index');
+        $("#comparison").mouseout(function(){
+            $("#comparison").html('Comparsion');
+            })
+        }
+
+      function predictionMove(){
+          $("#prediction").html('Cost Prediction');
+          $("#prediction").mouseout(function(){
+              $("#prediction").html('Prediction');
+          })
+      }
 </script>
 
 </html>

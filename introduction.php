@@ -60,10 +60,10 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="comparison.html" style="color: black;font-size: 16px; margin-top: -3px;">Comparison</a>
+                    <a class="nav-link" href="comparison.html" style="color: black;font-size: 16px; margin-top: -3px;" id="comparison" onmousemove="compareMove()">Comparison</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="prediction.php" style="color: black;font-size: 16px; margin-top: -3px;">Prediction</a>
+                    <a class="nav-link" href="prediction.php" style="color: black;font-size: 16px; margin-top: -3px;" id="prediction" onmousemove="predictionMove()">Prediction</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: none;">Quick start here
@@ -103,7 +103,7 @@
                                 </p>
                                 <p style="line-height: 200%; display: inline;">The living cost calculator helps you get a better understanding of your living expenses in Melbourne.</p>
                                  
-                                <font style="line-height:200%; text-align: justify;">Each selection has a variety of inputs to act as a guide for your financial position. It will then calculate how much you are spending in total and separated based on the input you provided.</font>
+                                <font style="line-height:200%; text-align: justify;">Each selection has a variety of inputs to act as a guide for your financial position. It will then calculate how much you are spending in total and display a breakdown of your expeted expenditure.</font>
                                 <p></p>
                                 <p>
                                     <!--改-->
@@ -129,7 +129,7 @@
                             <h2 class="modal-title" id="exampleModalLongTitle">Rounding</h2>
                         </div>
                         <div class="modal-body" style="text-align: left;">
-                            Each estimated and overall expense total is rounded down to the nearest dollar expect food expense is rounded down to the nearest dollar with one decimal place.<br><br>
+                            Each estimated and overall expense total is rounded down to the nearest dollar expect food expense is rounded down to the nearest dollar with two decimal place.<br><br>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -161,12 +161,11 @@
             </div>
             <!-- Footer -->
             <!-- class="page-footer" -->
-            <footer id="footer" style="background: white;position: absolute; bottom: 0;left:0px;right: 0px;  width:95%; margin: auto;border-radius: 5px;box-shadow: 4px 4px 20px lightblue; border:1px solid rgb(247,247,247);">
-                <!-- Copyright -->
+           <!--  <footer id="footer" style="background: white;position: absolute; bottom: 0;left:0px;right: 0px;  width:95%; margin: auto;border-radius: 5px;box-shadow: 4px 4px 20px lightblue; border:1px solid rgb(247,247,247);">
                 <div class="footer-copyright text-center">&copy;2019 by 'First steps in Melbourne'. Proudly created with EasyAussie team. &middot;
                     <a href="http://www.firststepsinmel.ml">firststepsinmel.ml</a>
                 </div>
-            </footer>
+            </footer> -->
             <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
             <script type="text/javascript" src="js/popper.min.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -186,9 +185,38 @@
             function btnAction(){
                 $("#btn").css('right','0px');
             }
-             function btnOut(){
+            function btnOut(){
                 $("#btn").css('right','-10px');
             }
+
+            function compareMove(){
+                $("#comparison").html('Compare cost index');
+                $("#comparison").mouseout(function(){
+                    $("#comparison").html('Comparsion');
+                    })
+                }
+
+            function predictionMove(){
+                $("#prediction").html('Cost Prediction');
+                $("#prediction").mouseout(function(){
+                    $("#prediction").html('Prediction');
+                })
+            }
+
+            function compareMove(){
+                $("#comparison").html('Compare cost index');
+                $("#comparison").mouseout(function(){
+                    $("#comparison").html('Comparsion');
+                    })
+        }
+
+              function predictionMove(){
+                  $("#prediction").html('Cost Prediction');
+                  $("#prediction").mouseout(function(){
+                      $("#prediction").html('Prediction');
+                  })
+              }
+
     </script>
 </body>
 

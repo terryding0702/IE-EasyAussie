@@ -51,7 +51,6 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
                         <ul class="nav navbar-nav">
-                            <li><a href="http://www.firststepsinmel.ml/" style="color: black;">Home</a></li>
                             <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
                                 <ul class="dropdown-menu">
@@ -66,8 +65,8 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
-                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
-                            <li><a href="Prediction.php" style="color: black;">Prediction</a></li>
+                            <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
                             <!-- <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
                                 <ul class="dropdown-menu">
@@ -142,7 +141,7 @@
             </div>
             <div class="col-md-7 col-xs-9">
                 <p class="title"><a href="EatingOut.html">Few Tips for Eating Out</a></p>
-                <p class="description">In Melbourne, the immigration from all over the world leads the unique and diversity of food culture. High quality level of food service brings the sparking of Melbourne’s retreatant. In addition, you can find the best retreatant in Melbourne that bring the best local food from all over the world...</p>
+                <p class="description">In Melbourne, the immigrations from all over the world lead the unique and diversity of food culture. High quality level of food service brings the sparking of Melbourne’s retreatant. In addition, you can find the best retreatant in Melbourne that bring the best local food from all over the world...</p>
             </div>
             <br>
              <hr class="featurette-divider" width="1150px" style="margin:auto; height: 20px;">
@@ -152,7 +151,7 @@
                 </div>
                 <div class="col-md-7 col-xs-9">
                     <p class="title"><a href="OtherTips.html">Other Expense Tips</a></p>
-                    <p class="description"> Studying in Melbourne, students need to consider about not only the main living costs which include accommodation, Transportation and food expenses, but also other living expenses. These other expenses might involve hairdressing, gym, shopping and entertainment. Students who are studying and living in Melbourne can easily find it to indulge in this premium and new lifestyle... </p>
+                    <p class="description"> Studying in Melbourne, students need to consider about not only the main living cost which include accommodation, Transportation and food expenses, but also other living expenses. These other expenses might involve hairdressing, gym, shopping and entertainment. Students who are studying and living in Melbourne can easily find it to indulge in this premium and new lifestyle... </p>
                 </div>
                 <br>
             </section>
@@ -164,7 +163,7 @@
                 </div>
                 <div class="col-md-7 col-xs-9">
                     <p class="title"><a href="StudentHealth.php">Overseas Student Health Cover (OSHC)</a></p>
-                    <p class="description"> Studying in overseas is not easy to prepare, like planning budget, adapting new lifestyle and even preparing the clothing.  however, Overseas Student Health Cover (OSHC) is one of the most important steps when students plan to come to Australian... </p>
+                    <p class="description"> Studying overseas is not easy to prepare. You need to consider many aspects such as planning for the budget, adapting new lifestyle and even preparing the clothing.  Besides, Overseas Student Health Cover (OSHC) is one of the most important steps when students plan to come to Australian... </p>
                 </div>
                 <br>
             </section>
@@ -192,6 +191,19 @@
 	function btnOut(){
 	  $("#btn").css('right','-10px');
 	}
+    function compareMove(){
+        $("#comparison").html('Compare cost index');
+        $("#comparison").mouseout(function(){
+            $("#comparison").html('Comparsion');
+            })
+        }
+
+      function predictionMove(){
+          $("#prediction").html('Cost Prediction');
+          $("#prediction").mouseout(function(){
+              $("#prediction").html('Prediction');
+          })
+      }
 </script>
 
 </html> <!-- end of site. what a ride! -->

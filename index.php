@@ -106,7 +106,7 @@
                 {
                   coords:{lat:lat[i],lng:lng[i]},
                   content:"<h5 style='text-align:center;'>" + content[i] + '</h5>' +  'Region: ' + reg[i] +  '<br>' + 'Average Rent: ' + cost[i] + '<br>' + "<a target='_blank' href= '"+website[i]+"'>" + 'View suburb detail on googleMap' + "</a>",
-                  
+                  iconImage:'img/lala.png'
                 }
               );
           }
@@ -299,17 +299,8 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                   </ul>
                                 </li>
-                            <li><a href="comparison.html">Comparison</a></li>
-                            <li><a href="prediction.php">Prediction</a></li>
-                           <!--  <li class="dropdown" id="preDrag" onclick="calculatorDrag()">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="preSup"><span class="caret"></span>&nbsp;&nbsp;Prediction</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="prediction.php">Your future costs</a></li>
-                                    <li><a href="#">article 1</a></li>
-                                    <li><a href="#">article 2</a></li>
-                                  </ul>
-                                </li> -->
-                         <!--    <li><a href="#about">About us</a></li> -->
+                              <li><a href="comparison.html" id="comparison" style="font-size: 16px;" onmousemove="compareMove()">Comparison</a></li>
+                              <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="font-size: 16px;">Prediction</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -317,7 +308,6 @@
                                     <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
                                     <li><a href="comparison.html">Comparison</a></li>
                                     <li><a href="prediction.php">Prediction</a></li>
-                                    <!--<li><a href="#">About us</a></li> -->
                                 </ul>
                             </li>
                         </ul>
@@ -389,7 +379,7 @@
             <h1 style="font-weight: bolder; font-size: 55px; color: rgb(51,122,183);font-family: 'poppins'">Melbourne</h1>
             <br>
             <span style="font-size: 20px;">
-            Melbourne had been voted the world is most livable city for seven years from 2011 to 2017, and it is not hard to see why. It is a very cool city with a fantastic quality of life. The locals share many passions, with a particular focus on coffee, sport, music, the arts and food.
+            Melbourne has been voted as the world is most livable city for seven years from 2011 to 2017, and it is not hard to see why. It is a very cool city with a fantastic quality of life. The locals share many passions, with a particular focus on coffee, sport, music, the arts and food.
             Melbourne is a city of many cultures and backgrounds and is accepting and inclusive of all.
             </span>
           </div>
@@ -449,7 +439,7 @@
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-6" style="margin-top: -120px;">
-                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;">Make Melbourne your home</h2>
+                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;">Make Melbourne Your Home</h2>
                 <br>
                 <p class="lead">Melbourne is one of the most livable places all over the world. People who are living in Melbourne will enjoy a safe city, world- class education, business opportunities and relaxing and healthy environment. There are some amazing discover that Melbourne has to offer you. <a href="accommodationTips.html">Find More</a></p>
             </div>
@@ -460,7 +450,7 @@
        <hr class="featurette-divider" style="height: 5px;"> 
         <div class="row featurette">
             <div class="col-md-7 col-md-push-5" style="margin-top: -30px; margin-top: -120px;">
-                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;margin-left: 30px;">Discover Melbourne lifestyle</h2>
+                <h2 class="featurette-heading" style="font-size: 55px; color: rgb(51,122,183);font-family: 'poppins';font-weight: bolder;margin-left: 30px;">Discover Melbourne Lifestyle</h2>
                 <br>
                 <p class="lead" style="margin-left: 30px;">Discover the new Melbourne life in the southern hemisphere. You will easily find it to indulge in this premium and new lifestyle Melbourne has to provide. As an international student, you can enjoy an easy transition into your new life in Melbourne. Discover more and you will like this new Melbourne lifestyle. <a href="OtherTips.html">Find More</a></p>
             </div>
@@ -498,6 +488,20 @@
           }
           function btnOut(){
             $("#btn").css('right','-10px');
+          }
+
+          function compareMove(){
+            $("#comparison").html('Compare cost index');
+            $("#comparison").mouseout(function(){
+                $("#comparison").html('Comparsion');
+                })
+            }
+
+          function predictionMove(){
+              $("#prediction").html('Cost Prediction');
+              $("#prediction").mouseout(function(){
+                  $("#prediction").html('Prediction');
+              })
           }
         </script>
 

@@ -82,8 +82,11 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
-                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
-                            <li><a href="prediction.php" style="color: black">Prediction</a></li>
+                            <li class="nav-item">
+                    <a class="nav-link" href="comparison.html" style="color: black;font-size: 16px; margin-top: -3px;" id="comparison" onmousemove="compareMove()">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="prediction.php" style="color: black;font-size: 16px; margin-top: -3px;" id="prediction" onmousemove="predictionMove()">Prediction</a>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -111,7 +114,7 @@
             <article class="content_body">
                 <br>
                 <p class="article">
-                    Studying in Melbourne, students need to consider about not only the main living costs which include accommodation, Transportation and food expenses, but also other living expenses. These other expenses might involve hairdressing, gym, shopping and entertainment. Students who are studying and living in Melbourne can easily find it to indulge in this premium and new lifestyle. However, some small tips for this new lifestyle can also be cheap for student or even be free to enjoy in. 
+                    Studying in Melbourne, students need to consider about not only the main living cost which include accommodation, Transportation and food expenses, but also other living expenses. These other expenses might involve hairdressing, gym, shopping and entertainment. Students who are studying and living in Melbourne can easily find it to indulge in this premium and new lifestyle. However, some small tips for this new lifestyle can also be cheap for student or even be free to enjoy in. 
                 </p><br>
                 <p class="subTitle">
                     Hairdressing for Student
@@ -124,13 +127,13 @@
                     Cheap Gym Memberships
                 </p><br>
                 <p class="article">
-                    No matter you used to join gym before or want to plan your building you body now, gym culture in Melbourne is quite ubiquitous. Therefore, let’s joining the gym and planning your workout. All the gyms provide free trial and students can experience gym facility then join the memberships. Besides, there are more student discounts for student before joining the gym. Student can change up their workout routines and venues and some offers around 70% off on some six-week workshops, five to ten training class and monthly discounts. Find out more discount in: <a href="https://www.groupon.com.au/browse/melbourne?lat=-37.77&lng=144.953&query=gym&address=Melbourne&division=melbourne&locale=en_AU/">here</a>
+                    No matter you used to join gym before or plan to do more training now, gym culture in Melbourne is quite ubiquitous. Therefore, let’s joining the gym and planning your workout. All the gyms provide free trial and students can experience gym facility then join the memberships. Besides, there are more student discounts for student before joining the gym. Student can change up their workout routines and venues and some offers around 70% off on some six-week workshops, five to ten training class and monthly discounts. Find out more discount in: <a href="https://www.groupon.com.au/browse/melbourne?lat=-37.77&lng=144.953&query=gym&address=Melbourne&division=melbourne&locale=en_AU/">here</a>
                 </p><br>
                 <p class="subTitle">
                     Enjoy Free Events
                 </p><br>
                 <p class="article">
-                    Melbourne offers a plenty of events that cost a grant total of zero. You might still need to book it, but most of them just go and join it. There is a wide range of free annual events which include world-class events. If you miss an event, don’t fret. You also can attend it in next year. The following link is from City of Melbourne, you can find the events you like and enjoy them  in: <a href="https://whatson.melbourne.vic.gov.au/Whatson/Free/Pages/Free.aspx">here</a>
+                    Melbourne offers a plenty of events that cost a grant total of zero. You might need to book beforehand, but for most of them, you could just go and join. There is a wide range of free annual events which include world-class events. If you miss an event, don’t fret. You also can attend it in next year. The following link is from City of Melbourne, you can find the events you like and enjoy them  in: <a href="https://whatson.melbourne.vic.gov.au/Whatson/Free/Pages/Free.aspx">here</a>
                 </p><br>
                 <p class="subTitle">
                     Cheap Gym Memberships
@@ -160,6 +163,20 @@
     function btnOut(){
       $("#btn").css('right','-10px');
     }
+
+    function compareMove(){
+    $("#comparison").html('Compare cost index');
+    $("#comparison").mouseout(function(){
+        $("#comparison").html('Comparsion');
+        })
+}
+
+  function predictionMove(){
+      $("#prediction").html('Cost Prediction');
+      $("#prediction").mouseout(function(){
+          $("#prediction").html('Prediction');
+      })
+  }
 </script>
 
 </html>

@@ -68,7 +68,7 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
                         <ul class="nav navbar-nav">
-                            <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li>
+                            <!-- <li><a href="http://www.firststepsinmel.ml/" style="color: black">Home</a></li> -->
                             <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
                                 <ul class="dropdown-menu">
@@ -83,8 +83,10 @@
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
-                            <li><a href="comparison.html" style="color: black;">Comparison</a></li>
-                            <li><a href="prediction.php" style="color: black">Prediction</a></li>
+                            <!-- <li><a href="comparison.html" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" style="color: black">Prediction</a></li> -->
+                            <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -111,7 +113,7 @@
         <section class="main">
             <article class="content_body">
                 <p class="article">
-                    Studying in overseas is not easy to prepare, like planning budget, adapting new lifestyle and even preparing the clothing. Most students are concerned about their study and life, however, Overseas Student Health Cover (OSHC) is one of the most important steps when students plan to come to Australian.
+                    Studying overseas is not easy to prepare. You need to consider many aspects such as planning for the budget, adapting new lifestyle and even preparing the clothing.  Besides, Overseas Student Health Cover (OSHC) is one of the most important steps when students plan to come to Australian.
                 </p><br>
                 <p class="subTitle">
                     Why OSHC Important?
@@ -157,17 +159,31 @@
     </div>
 </body>
 <script type="text/javascript">
-function calculatorDrag() {
-    $("#costFont").css('background-color', "white");
-    $("#stuSup").css('background-color', "white");
-    $("#preSup").css('background-color', "white");
-}
-function btnAction(){
+    function calculatorDrag() {
+        $("#costFont").css('background-color', "white");
+        $("#stuSup").css('background-color', "white");
+        $("#preSup").css('background-color', "white");
+    }
+    function btnAction(){
       $("#btn").css('right','0px');
     }
     function btnOut(){
       $("#btn").css('right','-10px');
     }
+
+     function compareMove(){
+        $("#comparison").html('Compare cost index');
+        $("#comparison").mouseout(function(){
+            $("#comparison").html('Comparsion');
+            })
+        }
+
+      function predictionMove(){
+          $("#prediction").html('Cost Prediction');
+          $("#prediction").mouseout(function(){
+              $("#prediction").html('Prediction');
+          })
+      }
 </script>
 
 </html>
