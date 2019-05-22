@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="js/jquery-1.9.1.js">
-  </script>
+  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1>
     <meta http-equiv="x-ua-compatible content="ie=edge">
@@ -12,7 +11,6 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/js/vendor/holder.min.js"></script>
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-    <style type="text/css">
     <style type="text/css">
     * {
         font-family: "Arial";
@@ -36,197 +34,454 @@
       font-size:15px;
     }
     </style>
-
-<style>
-body {font-family: Arial; max-width:auto; margin: auto; text-decoration: none;}
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 0px solid #ccc;
-  background-color: #f1f1f1;
-}
-.helpicon{
-	display:block;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  color: #212529;
-  text-decoration: none;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 0px solid #ccc;
-  border-top: none;
-}
-.container{
-	width:50%;
-}
-.btn-primary {
-  background-color: #4285f4 !important;
-  color: #fff; }
-  .btn-primary:hover {
-    background-color: #5a95f5;
-    color: #fff; }
-  .btn-primary:focus, .btn-primary.focus {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-  .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-    background-color: #0b51c5; }
-  .btn-primary.dropdown-toggle {
-    background-color: #4285f4 !important; }
-    .btn-primary.dropdown-toggle:hover, .btn-primary.dropdown-toggle:focus {
-      background-color: #5a95f5 !important; }
-  .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    background-color: #0b51c5 !important; }
-  .btn-primary:not([disabled]):not(.disabled):active:focus, .btn-primary:not([disabled]):not(.disabled).active:focus,
-  .show > .btn-primary.dropdown-toggle:focus {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-
-	
-	@media screen and (max-width:959px){
-		
+	<style>
 		body {font-family: Arial; max-width:auto; margin: auto; text-decoration: none;}
 
-/* Style the tab */
-.tab {
-   width: 100%;
-}
+		/* Style the tab */
+		.tab {
+		  overflow: hidden;
+		  border: 0px solid #ccc;
+		  background-color: #f1f1f1;
+		}
+		.helpicon{
+			display:block;
+		}
 
-/* Style the buttons inside the tab */
-.tab button {
-	width:100%;
-}
+		/* Style the buttons inside the tab */
+		.tab button {
+		  background-color: inherit;
+		  float: left;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 16px;
+		  transition: 0.3s;
+		  font-size: 17px;
+		}
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  }
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  color: #212529;
+		  text-decoration: none;
+		}
 
-/* Create an active/current tablink class */
-.tab button.active {
+		/* Create an active/current tablink class */
+		.tab button.active {
+		  color: #fff;
+		  background-color: #007bff;
+		  border-color: #007bff;
+		}
 
-}
+		/* Style the tab content */
+		.tabcontent {
+		  display: none;
+		  padding: 6px 12px;
+		  border: 0px solid #ccc;
+		  border-top: none;
+		}
+		.container{
+			width:50%;
+		}
+		.btn-primary {
+		  background-color: #4285f4 !important;
+		  color: #fff; }
+		  .btn-primary:hover {
+			background-color: #5a95f5;
+			color: #fff; }
+		  .btn-primary:focus, .btn-primary.focus {
+			-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+		  .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+			background-color: #0b51c5; }
+		  .btn-primary.dropdown-toggle {
+			background-color: #4285f4 !important; }
+			.btn-primary.dropdown-toggle:hover, .btn-primary.dropdown-toggle:focus {
+			  background-color: #5a95f5 !important; }
+		  .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
+		  .show > .btn-primary.dropdown-toggle {
+			-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			background-color: #0b51c5 !important; }
+		  .btn-primary:not([disabled]):not(.disabled):active:focus, .btn-primary:not([disabled]):not(.disabled).active:focus,
+		  .show > .btn-primary.dropdown-toggle:focus {
+			-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
-/* Style the tab content */
-.tabcontent {
-   width:100%;
-}
-.container{
-	 width:100%;
-	 margin-top:30px;
-	 margin-bottom:30px;
-}
+			
+			@media screen and (max-width:959px){
+				
+				body {font-family: Arial; max-width:auto; margin: auto; text-decoration: none;}
 
-.helpicon{
-	display: none;
-}
-.btn-primary {
-  background-color: #4285f4 !important;
-  color: #fff; }
-  .btn-primary:hover {
-    background-color: #5a95f5;
-    color: #fff; }
-  .btn-primary:focus, .btn-primary.focus {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-  .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-    background-color: #0b51c5; }
-  .btn-primary.dropdown-toggle {
-    background-color: #4285f4 !important; }
-    .btn-primary.dropdown-toggle:hover, .btn-primary.dropdown-toggle:focus {
-      background-color: #5a95f5 !important; }
-  .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    background-color: #0b51c5 !important; }
-  .btn-primary:not([disabled]):not(.disabled):active:focus, .btn-primary:not([disabled]):not(.disabled).active:focus,
-  .show > .btn-primary.dropdown-toggle:focus {
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-	}
+		/* Style the tab */
+		.tab {
+		   width: 100%;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			width:100%;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  }
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		   width:100%;
+		}
+		.container{
+			 width:100%;
+			 margin-top:30px;
+			 margin-bottom:30px;
+		}
+
+		.helpicon{
+			display: none;
+		}
+		.btn-primary {
+		  background-color: #4285f4 !important;
+		  color: #fff; }
+		  .btn-primary:hover {
+			background-color: #5a95f5;
+			color: #fff; }
+		  .btn-primary:focus, .btn-primary.focus {
+			-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+		  .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+			background-color: #0b51c5; }
+		  .btn-primary.dropdown-toggle {
+			background-color: #4285f4 !important; }
+			.btn-primary.dropdown-toggle:hover, .btn-primary.dropdown-toggle:focus {
+			  background-color: #5a95f5 !important; }
+		  .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active,
+		  .show > .btn-primary.dropdown-toggle {
+			-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			background-color: #0b51c5 !important; }
+		  .btn-primary:not([disabled]):not(.disabled):active:focus, .btn-primary:not([disabled]):not(.disabled).active:focus,
+		  .show > .btn-primary.dropdown-toggle:focus {
+			-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+			}
 </style>
-<script>
-function showFre()
-{
-$("#frequency").removeClass("none");
-$("#frequency").addClass("showDIV");
-}
+	<script>
+		function showFre()
+		{
+		$("#frequency").removeClass("none");
+		$("#frequency").addClass("showDIV");
+		}
 
-function hideFre()
-{
-$("#frequency").removeClass("showdiv");
-$("#frequency").addClass("none");
-}
+		function hideFre()
+		{
+		$("#frequency").removeClass("showdiv");
+		$("#frequency").addClass("none");
+		}
 </script>
-<script>
-function showFre1()
-{
-$("#frequency1").removeClass("none");
-$("#frequency1").addClass("showDIV");
-}
+	<script>
+		function showFre1()
+		{
+		$("#frequency1").removeClass("none");
+		$("#frequency1").addClass("showDIV");
+		}
 
-function hideFre1()
-{
-$("#frequency1").removeClass("showdiv");
-$("#frequency1").addClass("none");
-}
+		function hideFre1()
+		{
+		$("#frequency1").removeClass("showdiv");
+		$("#frequency1").addClass("none");
+		}
 </script>
-<script>
-function showFre2()
-{
-$("#frequency2").removeClass("none");
-$("#frequency2").addClass("showDIV");
-}
+	<script>
+		function showFre2()
+		{
+		$("#frequency2").removeClass("none");
+		$("#frequency2").addClass("showDIV");
+		}
 
-function hideFre2()
-{
-$("#frequency2").removeClass("showdiv");
-$("#frequency2").addClass("none");
-}
+		function hideFre2()
+		{
+		$("#frequency2").removeClass("showdiv");
+		$("#frequency2").addClass("none");
+		}
 </script>
-<script>
-function showFre3()
-{
-$("#contractval").removeClass("none");
-$("#contractval").addClass("showDIV");
-}
+	<script>
+		function showFre3()
+		{
+		$("#contractval").removeClass("none");
+		$("#contractval").addClass("showDIV");
+		}
 
-function hideFre3()
-{
-$("#contractval").removeClass("showdiv");
-$("#contractval").addClass("none");
-}
-</script>
+		function hideFre3()
+		{
+		$("#contractval").removeClass("showdiv");
+		$("#contractval").addClass("none");
+		}
+	</script>
+	 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <script type="text/javascript">
+            function getHelp(){
+              $('#myModal').modal('show');
+            }
 
-</head>
+            function getClose(){
+              $('#myModal2').modal('show');
+            }
+        </script>
+		<script>
+		function openEvent(evt, Name) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(Name).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+		$(function() {
+		  $( "#RadioButtons1" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons2" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#Button1" ).button(); 
+		});
+		$(function() {
+		  $( "#Button2" ).button(); 
+		});
+		$(function() {
+		  $( "#Button3" ).button(); 
+		});
+		$(function() {
+		  $( "#Button4" ).button(); 
+		});
+		$(function() {
+		  $( "#RadioButtons3" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons4" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons5" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons6" ).buttonset(); 
+		});
+		  function eleccal(){
+			var resi = document.querySelector('input[name=RadioButtons7]:checked').value;
+			var ac = document.querySelector('input[name=RadioButtons8]:checked').value;
+			var uh = document.querySelector('input[name=RadioButtons9]:checked').value;
+			var eh = document.querySelector('input[name=RadioButtons10]:checked').value;
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("elecbillval").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","energy.php?resi=" +resi + "&ac=" +ac + "&uh=" +uh + "&eh=" +eh, true);
+				xmlhttp.send();
+		  }
+		  
+		  function phonecost(){   
+		  var data = document.querySelector('input[name=RadioButtons1]:checked').value;
+		  var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
+			var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
+			//var phonetotalbill = parseInt(datacost) + parseInt(intercal);
+			//document.getElementById("billval").innerHTML = phonetotalbill+'$';
+			if (plan == 1 ) {
+			var contract=0;
+		 }
+		  else {
+			var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
+		  }
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("billval").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","phonedb.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
+				xmlhttp.send();
+		  }
+		  
+		  function viewdata() {
+		  var data = document.querySelector('input[name=RadioButtons1]:checked').value;
+		  var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
+		  var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
+			//var phonetotalbill = parseInt(datacost) + parseInt(intercal);
+			//document.getElementById("billval").innerHTML = phonetotalbill+'$';
+			  if (plan == 1 ) {
+			var contract=0;
+		  }
+		  else {
+			var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
+		  }
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("bestplansval").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","phoneplans.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
+				xmlhttp.send();
+		  }
+		 function viewdata1() {
+		 var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("bestplansval1").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","internetplan.php?internet=" +internet, true);
+				xmlhttp.send();
+		 }
+		   function viewdata2() {
+			var resi = document.querySelector('input[name=RadioButtons7]:checked').value;
+			var ac = document.querySelector('input[name=RadioButtons8]:checked').value;
+			var uh = document.querySelector('input[name=RadioButtons9]:checked').value;
+			var eh = document.querySelector('input[name=RadioButtons10]:checked').value;
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("bestplansval2").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","energyplans.php?resi=" +resi + "&ac=" +ac + "&uh=" +uh + "&eh=" +eh, true);
+				xmlhttp.send();
+		  }
+
+		function intbill() {
+		var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("intbillval").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","internetdb.php?q=" +internet, true);
+
+				xmlhttp.send();
+		  
+		  }
+		function waterbill(){
+		  var residentnum = document.querySelector('input[name=RadioButtons6]:checked').value;
+		  var dw = document.querySelector('input[name=RadioButtons11]:checked').value;
+		  var wm = document.querySelector('input[name=RadioButtons12]:checked').value;
+		  var ec = document.querySelector('input[name=RadioButtons13]:checked').value;
+		  
+		  if (dw == 0 ) {
+			var dwf=0;
+		  }
+
+		  else {
+		  var dwf = document.querySelector('input[name=RadioButtons14]:checked').value;
+		}
+		  if (wm == 0 ) {
+			var wmf=0;
+		  }
+		  
+		  else {
+		  var wmf = document.querySelector('input[name=RadioButtons15]:checked').value;
+		}
+		  if (ec == 0 ) {
+			var ech=0;
+		  }
+		  else {
+		  var ech = document.querySelector('input[name=RadioButtons16]:checked').value;
+		}
+			  if (window.XMLHttpRequest) {
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} 
+			  xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("waterbillval").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET","waterdb.php?residentnum=" +residentnum + "&dw=" +dw + "&wm=" +wm + "&ec=" +ec + "&dwf=" +dwf + "&wmf=" +wmf + "&ech=" +ech, true);
+				xmlhttp.send();
+		}
+		$(function() {
+		  $( "#RadioButtons7" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons8" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons9" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons10" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons11" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons12" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons13" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons14" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons15" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons16" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons17" ).buttonset(); 
+		});
+		$(function() {
+		  $( "#RadioButtons18" ).buttonset(); 
+		});
+		  function calculatorDrag() {
+			  $("#costFont").css('background-color', "white");
+			  $("#stuSup").css('background-color', "white");
+			  $("#preSup").css('background-color', "white");
+		  }
+	</script>
+		<style> 
+		.none { display:none; }, 
+		.showDIV { display:block; } 
+		</style>  
+		<style type="text/css"> 
+		   input[type="radio"]{margin: 10px 0};} 
+		</style>
+	</head>
 <body>
     <!--nav-->
     <div class="navbar-wrapper" style="position: fixed; top: 12px;left: 10px;right: 10px; z-index: 999;">
@@ -252,7 +507,7 @@ $("#contractval").addClass("none");
                             <li class="dropdown" id="subSupDrag" onclick="calculatorDrag()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="stuSup"><span class="caret"></span>&nbsp;&nbsp;Student Support</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://www.firststepsinmel.ml:3838/easyaussie/find_a_suburb/">Find a Suburb</a></li>
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Find a Suburb</a></li>
                                     <li><a href="TipsList.html">Guidance</a></li>
                                 </ul>
                             </li>
@@ -284,10 +539,10 @@ $("#contractval").addClass("none");
     <br>
     <br>
     <br>
-<div class="container" style="height: 600px;width: 70%; background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
+<div class="container-fluid" style="width: 70%;background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
 <br>
 <div style="text-align: center; font-size: 25px; font-family: Arial Black; font-weight: bold; font-variant: small-caps;">Calculate the approximate cost of monthly bills</div>
-				  <div class="tab" style="height:50px; width: 65% border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
+				  <div class="tab" style="height:50px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
                     <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black; display: block;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Energy')">Energy</button>
@@ -302,15 +557,16 @@ $("#contractval").addClass("none");
                         <img style=" height: 160px; width: 25%; float: left;" src="img/phone4.jpg";>
                       </div>
 					  </div>
-                      <div class="container" style="height: 170px; width: 80%;">
-                      <div class="container" style="float: right; height: 170px;">
-                        <br>
+                      <div class="container-fluid">
+                      <div class="container-fluid" style="float: right; text-align: center; width: 50%">
                       <div style="font-weight: bold; font-size: 27px;">Data:</div>
                       <div id="RadioButtons1" style="color: black;">
                         <input type="radio" name="RadioButtons1" id="Radio1" value="2" checked>
                         <label for="Radio1">2GB</label>
+						&nbsp;&nbsp;
                         <input type="radio" name="RadioButtons1" id="Radio2" value="10" >
                         <label for="Radio2">10GB</label>
+						&nbsp;&nbsp;
                         <input type="radio" name="RadioButtons1" id="Radio3" value="30" >
                         <label for="Radio3">30GB</label>
                       </div>
@@ -318,43 +574,39 @@ $("#contractval").addClass("none");
                       <div id="RadioButtons2" style="color: black;">
                       <input type="radio" name="RadioButtons2" id="Radio4" value="1" checked>
                       <label for="Radio4">Yes</label>
+					  &nbsp;&nbsp;
                       <input type="radio" name="RadioButtons2" id="Radio5" value="0" >
                       <label for="Radio5">No</label>
                     </div>
                   </div>
-                   <div class="container" style="float: left; height: 170px; content: center;">
-                    <br>
-                  
+                   <div class="container-fluid" style="float: left; text-align: center; width: 50%">
                     <div style="font-weight: bold;font-size: 27px;">Plan:</div>
                       <div id="RadioButtons17" style="color: black;">
-                      <input type="radio" name="RadioButtons17" id="Radio53" value="1" onclick="hideFre3()" checked>
-                      <label for="Radio53">Prepaid</label>
-                      <input type="radio" name="RadioButtons17" id="Radio54" value="0" onclick="showFre3()">
-                      <label for="Radio54">Postpaid</label>
+                      <input type="radio" name="RadioButtons17" id="Radio53" value="0" onclick="showFre3()" checked>
+                      <label for="Radio53">Postpaid</label>
+					  &nbsp;&nbsp;
+                      <input type="radio" name="RadioButtons17" id="Radio54" value="1" onclick="hideFre3()">
+                      <label for="Radio54">Prepaid</label>
 					  </div>
                 <div id="contractval" style="font-weight: bold;font-size: 27px;">Contract:
                      <div id="RadioButtons18" style="color: black;">
-                      <input type="radio" name="RadioButtons18" id="Radio55" value="1">
+                      <input type="radio" name="RadioButtons18" id="Radio55" value="1" checked>
                       <label for="Radio55">Yes</label>
+					  &nbsp;&nbsp;
                       <input type="radio" name="RadioButtons18" id="Radio56" value="0">
                       <label for="Radio56">No</label>
 					</div>
 				</div>
 				</div>
+				</div>
                    <div>
                      <button class="btn btn-primary btn" id="Button1" onClick="phonecost()">Calculate</button>
+					 &nbsp;&nbsp;
                      <button class="btn btn-primary btn" id="Button1" onClick="viewdata()">Best deals</button>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="billval"></span></div>
                    <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval"></span></div>
-                 </div>
-                      <!--<div>
-                        <button 
-                            id="Button3" onclick="document.getElementById('popup')">Recommendation
-                        </button>
-                      </div> -->
                   </div>
               </div>
-
             <div id="Internet" class="tabcontent">
                 <div class="header" style="height: 140px; width: 100%">
                     <div class="putimage" style="text-align: center;">
@@ -362,110 +614,118 @@ $("#contractval").addClass("none");
                         <img style=" height: 160px; width: 25%; float: left;" src="img/internet5.jpeg">
                         <img style=" height: 160px; width: 25%; float: left;" src="img/internet.jpg">
                         <img style=" height: 160px; width: 25%; float: left;" src="img/internet4.jpg">
-                      <br>
-                      <br>
-                      <br>
-              <div style="font-weight: bold; font-size: 30px;">Data requirement per month: </div>
+					</div>
+				</div>
+				<div class="container-fluid">
+				<div style="font-weight: bold; font-size: 30px;">Data requirement per month: </div>
               <div id="RadioButtons3" style="color: black;">
                 <input type="radio" name="RadioButtons3" id="Radio6" value="100" checked>
                 <label for="Radio6">100GB</label>
+				&nbsp;&nbsp;
                 <input type="radio" name="RadioButtons3" id="Radio7" value="500">
                 <label for="Radio7">500GB</label>
+				&nbsp;&nbsp;
                 <input type="radio" name="RadioButtons3" id="Radio8" value="Unlimited">
                 <label for="Radio8">Unlimited</label>
               </div>
               <br>
                <div style="text-align: center;">
                   <button class="btn btn-primary btn" id="Button2" onClick="intbill()">Calculate</button>
+				  &nbsp;&nbsp;
                   <button class="btn btn-primary btn" id="Button1" onClick="viewdata1()">Best deals</button>
                    </div>
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="intbillval"></span></div>
 				   <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval1"></span></div>
               </div>
-              </div>
-          </div>
-<div id="Energy" class="tabcontent" style="height: 300px;width: 100%;text-align:auto;">
-	<div class="header" style="height: 140px; width: 100%;">
-         <div class="putimage" style="text-align: center;">
-                        <img style=" height: 160px; width: 25%; float: left;" src="img/elec2.jpg";>
-                        <img style=" height: 160px; width: 25%; float: left;" src="img/elec3.jpg";>
-                        <img style=" height: 160px; width: 25%; float: left;" src="img/elec4.jpg";>
-                        <img style=" height: 160px; width: 25%; float: left;" src="img/electricity.jpg";>
-			</div>
-			</div>
-			 <div class="container" style="height: 170px; width: 80%;">
-   <div class="container" style="float: left; height: 170px;">
-    <br>
-  <div style="font-weight: bold; font-size: 27px;"> No.of residents: 
-  <img src="img/infoicon.png" title="click here for info" onclick="getHelp()" data-toggle="modal" data-target="#exampleModalCenter">
-  </div>
-      <div>
-          <input type="radio" name="RadioButtons7" id="Radio18" value="1" checked>
-          <label for="Radio18">One</label>
-          <input type="radio" name="RadioButtons7" id="Radio19" value="2">
-          <label for="Radio19">Two</label>
-          <input type="radio" name="RadioButtons7" id="Radio53" value="3">
-          <label for="Radio53">Three</label>
-          <input type="radio" name="RadioButtons7" id="Radio54" value="4">
-          <label for="Radio54">Four</label>
-        </div>
-    <div style="font-weight: bold; font-size: 27px;"> Air conditioner: </div>
-      <div>
-          <input type="radio" name="RadioButtons8" id="Radio20" value="1" checked>
-          <label for="Radio20">Yes</label>
-          <input type="radio" name="RadioButtons8" id="Radio21" value="0">
-          <label for="Radio21">No</label>
-        </div>
+		  </div>
+					<div id="Energy" class="tabcontent">
+						<div class="header" style="height: 140px; width: 100%;">
+						<div class="putimage" style="text-align: center;">
+						<img style=" height: 160px; width: 25%; float: left;" src="img/elec2.jpg";>
+						<img style=" height: 160px; width: 25%; float: left;" src="img/elec3.jpg";>
+						<img style=" height: 160px; width: 25%; float: left;" src="img/elec4.jpg";>
+						<img style=" height: 160px; width: 25%; float: left;" src="img/electricity.jpg";>
+						</div>
+					</div>
+					<div class="container-fluid">
+					<div class="container-fluid" style="float: left; text-align: center; width: 50%">
+						<br>
+						<div style="font-weight: bold; font-size: 27px;"> No.of residents: 
+						<img src="img/infoicon.png" title="click here for info" onclick="getHelp()" data-toggle="modal" data-target="#exampleModalCenter">
+						</div>
+						<div>
+							<input type="radio" name="RadioButtons7" id="Radio18" value="1" checked>
+							  <label for="Radio18">One</label>
+							  &nbsp;&nbsp;
+							  <input type="radio" name="RadioButtons7" id="Radio19" value="2">
+							  <label for="Radio19">Two</label>
+							  &nbsp;&nbsp;
+							  <input type="radio" name="RadioButtons7" id="Radio53" value="3">
+							  <label for="Radio53">Three</label>
+							  &nbsp;&nbsp;
+							  <input type="radio" name="RadioButtons7" id="Radio54" value="4">
+							  <label for="Radio54">Four</label>
+						</div>
+					<div style="font-weight: bold; font-size: 27px;"> Air conditioner: </div>
+					<div>
+					  <input type="radio" name="RadioButtons8" id="Radio20" value="1" checked>
+					  <label for="Radio20">Yes</label>
+					  &nbsp;&nbsp;
+					  <input type="radio" name="RadioButtons8" id="Radio21" value="0">
+					  <label for="Radio21">No</label>
+					</div>
+				</div>
+		 <div class="container-fluid" style="float: right; text-align: center; width: 50%">	
+		`		<div style="font-weight: bold; font-size: 27px;">  Underfloor heating: </div>
+				<div>
+				  <input type="radio" name="RadioButtons9" id="Radio22" value="1" checked>
+				  <label for="Radio22">Yes</label>
+				  &nbsp;&nbsp;
+				  <input type="radio" name="RadioButtons9" id="Radio23" value="0">
+				  <label for="Radio23">No</label>
+				</div>
+		<div style="font-weight: bold; font-size: 27px;">  Electric heater: </div>
+				<div>
+				  <input type="radio" name="RadioButtons10" id="Radio24" value="1" checked>
+				  <label for="Radio24">Yes</label>
+				  &nbsp;&nbsp;
+				  <input type="radio" name="RadioButtons10" id="Radio25" value="0">
+				  <label for="Radio25">No</label>
+				</div>
 		</div>
- <div class="container" style="float: right; height: 170px;">
-<br>	
-<div style="font-weight: bold; font-size: 27px;">  Underfloor heating: </div>
-      <div>
-          <input type="radio" name="RadioButtons9" id="Radio22" value="1" checked>
-          <label for="Radio22">Yes</label>
-          <input type="radio" name="RadioButtons9" id="Radio23" value="0">
-          <label for="Radio23">No</label>
-        </div>
-<div style="font-weight: bold; font-size: 27px;">  Electric heater: </div>
-      <div>
-          <input type="radio" name="RadioButtons10" id="Radio24" value="1" checked>
-          <label for="Radio24">Yes</label>
-          <input type="radio" name="RadioButtons10" id="Radio25" value="0">
-          <label for="Radio25">No</label>
-        </div>
-</div>
-<div>
-				<button class="btn btn-primary btn" id="Button3" onClick="eleccal()">Calculate</button>
-				<button class="btn btn-primary btn" id="Button1" onClick="viewdata2()">Best deals</button>
-		
-                <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="elecbillval"></span></div>
-                <div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval2"></span></div>
-            </div>
-</div>			
-</div>
-		  
-
-  <div id="Water" class="tabcontent">
-    <div class="header" style="height: 140px; width: 100%">
+		</div>
+					<div>
+						<button class="btn btn-primary btn" id="Button3" onClick="eleccal()">Calculate</button>
+						&nbsp;&nbsp;
+						<button class="btn btn-primary btn" id="Button1" onClick="viewdata2()">Best deals</button>				
+						<div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="elecbillval"></span></div>
+						<div style="color: black;font-size: 20px; font-style: italic;font-variant: small-caps; text-align: center;"> <span id="bestplansval2"></span></div>
+					</div>			
+		</div>
+				<div id="Water" class="tabcontent">		 
+					<div class="header" style="height: 140px; width: 100%">
                     <div class="putimage">
                         <img style=" height: 160px; width: 25%; float: left;" src="img/water.jpg">
                         <img style=" height: 160px; width: 25%; float: left;" src="img/water2.jpg">
                         <img style=" height: 160px; width: 25%; float: left;" src="img/water3.jpg">
                         <img style=" height: 160px; width: 25%; float: left;" src="img/water4.jpg">
 					</div>
-	</div>
-	<div class="container" style="height: 250px; width: 50%; float: left;">
-<br>
+					</div>
+					<div class="container-fluid">
+					<div class="container-fluid" style="width: 50%; float: left;">
   <div style="font-weight: bold; font-size: 27px;" >No. of residents 
   <img src="img/infoicon.png" title="click here for info" onclick="getHelp()" data-toggle="modal" data-target="#modal">
   </div>
   <div>
 	  <input type="radio" name="RadioButtons6" id="Radio15" value="1" checked>
       <label for="Radio15">One</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons6" id="Radio16" value="2">
       <label for="Radio16">Two</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons6" id="Radio17" value="3">
       <label for="Radio17">Three</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons6" id="Radio32" value="4">
       <label for="Radio32">Four</label>
     </div>
@@ -476,56 +736,67 @@ $("#contractval").addClass("none");
       <div>
 	  <input type="radio" name="RadioButtons11" id="Radio26" value="1" onclick="showFre()" checked>
       <label for="Radio26">Yes</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons11" id="Radio27" value="0" onclick="hideFre()">
       <label for="Radio27">No</label>
     </div>
 	<div id="frequency">
-    <div style="font-style: italic;">Use per week:
-	<br>
+    <div style="font-style: Arial; font-weight:bold; font-size: 18px">Use per week:
 	  <input type="radio" name="RadioButtons14" id="Radio32" value="1" checked>
-      <label for="Radio32">One</label>
+      <label for="Radio32">One   </label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons14" id="Radio33" value="2">
-      <label for="Radio33">Two</label>
+      <label for="Radio33">Two   </label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons14" id="Radio34" value="3">
-      <label for="Radio34">Three</label>
+      <label for="Radio34">Three   </label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons14" id="Radio35" value="4">
-      <label for="Radio35">Four</label>
+      <label for="Radio35">Four   </label>
 	  <br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="radio" name="RadioButtons14" id="Radio36" value="5">
       <label for="Radio36">Five</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons14" id="Radio37" value="6">
       <label for="Radio37">Six</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons14" id="Radio38" value="7">
       <label for="Radio38">Seven</label>
      </div>
    </div>
  </div>
- <div class="container" style="height: 250px; width: 50%; float: right;">
+ <div class="container-fluid" style="width: 50%; float: right;">
    	 <div style="font-weight: bold; font-size: 27px;"> Washing Machine 
   <img src="img/infoicon.png" title="click here for info" onclick="getHelp()" data-toggle="modal" data-target="#modal3">
   </div>
   <div>
       <input type="radio" name="RadioButtons12" id="Radio28" value="1" onclick="showFre1()" checked>
       <label for="Radio28">Yes</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons12" id="Radio29" value="0" onclick="hideFre1()">
       <label for="Radio29">No</label>
 	  </div>
-	<div id="frequency1">
-     <i>Use per week:
-      <br>
+	<div id="frequency1" style="font-style: Arial; font-weight:bold; font-size: 18px"> Use per week:
       <input type="radio" name="RadioButtons15" id="Radio39" value="1" checked>
       <label for="Radio39">One</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons15" id="Radio40" value="2">
       <label for="Radio40">Two</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons15" id="Radio41" value="3">
       <label for="Radio41">Three</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons15" id="Radio42" value="4">
       <label for="Radio42">Four</label>
 	  <br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" name="RadioButtons15" id="Radio43" value="5">
       <label for="Radio43">Five</label>
+	  &nbsp;&nbsp;
     <input type="radio" name="RadioButtons15" id="Radio44" value="6">
       <label for="Radio44">Six</label>
+	  &nbsp;&nbsp;
     <input type="radio" name="RadioButtons15" id="Radio45" value="7">
       <label for="Radio45">Seven</label>
     </i>
@@ -536,38 +807,42 @@ $("#contractval").addClass("none");
   <div>
       <input type="radio" name="RadioButtons13" id="Radio30" value="1" onclick="showFre2()" checked>
       <label for="Radio30">Yes</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons13" id="Radio31" value="0" onclick="hideFre2()">
       <label for="Radio31">No</label>
 	  </div>
-    <div id="frequency2">
-      <i>Hours a day:
-        <br>
+    <div id="frequency2" style="font-style: Arial; font-weight:bold; font-size: 18px;"> Hours a day:
       <input type="radio" name="RadioButtons16" id="Radio46" value="1" checked>
       <label for="Radio46">One</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons16" id="Radio47" value="2">
       <label for="Radio47">Two</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons16" id="Radio48" value="3">
       <label for="Radio48">Three</label>
+	  &nbsp;&nbsp;
       <input type="radio" name="RadioButtons16" id="Radio49" value="4">
       <label for="Radio49">Four</label>
 	  <br>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" name="RadioButtons16" id="Radio50" value="5">
       <label for="Radio50">Five</label>
+	  &nbsp;&nbsp;
     <input type="radio" name="RadioButtons16" id="Radio51" value="6">
       <label for="Radio51">Six</label>
+	  &nbsp;&nbsp;
     <input type="radio" name="RadioButtons16" id="Radio52" value="7">
       <label for="Radio52">Seven</label>
     </i>
   </div>
   </div>
-  <br>
-  <br>
-                  <button class="btn btn-primary btn" id="Button4" onClick="waterbill()">Calculate</button>
+  </div>
+				  <button class="btn btn-primary btn" id="Button4" onClick="waterbill()">Calculate</button>
+				  &nbsp;&nbsp;
                    <div style="color: black; font-weight: bolder; font-style: Arial Black;"> Average cost per month is: $<span id="waterbillval"></span></div>
-              </div>
-	</div>
-	</div>
-<div class="container" style="width: 100px;">
+			  </div>
+</div>
+<div class="container" style="width: 120px;">
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" >
@@ -584,7 +859,7 @@ $("#contractval").addClass("none");
       </div>
     </div>
     </div>
-<div class="container" style="width: 100px;">
+<div class="container" style="width: 120px;">
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" >
@@ -601,7 +876,7 @@ $("#contractval").addClass("none");
       </div>
     </div>
     </div>
-<div class="container" style="width: 100px;">
+<div class="container" style="width: 120px;">
     <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" >
@@ -618,7 +893,7 @@ $("#contractval").addClass("none");
       </div>
     </div>
     </div>
-<div class="container" style="width: 100px;">
+<div class="container" style="width: 120px;">
     <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" >
@@ -635,7 +910,7 @@ $("#contractval").addClass("none");
       </div>
     </div>
     </div>
-<div class="container" style="width: 100px;">
+<div class="container" style="width: 120px;">
     <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" >
@@ -652,268 +927,5 @@ $("#contractval").addClass("none");
       </div>
     </div>
     </div>
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="js/popper.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/mdb.min.js"></script>
-        <script type="text/javascript">
-            function getHelp(){
-              $('#myModal').modal('show');
-            }
-
-            function getClose(){
-              $('#myModal2').modal('show');
-            }
-        </script>
-<script>
-function openEvent(evt, Name) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(Name).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-$(function() {
-  $( "#RadioButtons1" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons2" ).buttonset(); 
-});
-$(function() {
-  $( "#Button1" ).button(); 
-});
-$(function() {
-  $( "#Button2" ).button(); 
-});
-$(function() {
-  $( "#Button3" ).button(); 
-});
-$(function() {
-  $( "#Button4" ).button(); 
-});
-$(function() {
-  $( "#RadioButtons3" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons4" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons5" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons6" ).buttonset(); 
-});
-  function eleccal(){
-    var resi = document.querySelector('input[name=RadioButtons7]:checked').value;
-    var ac = document.querySelector('input[name=RadioButtons8]:checked').value;
-    var uh = document.querySelector('input[name=RadioButtons9]:checked').value;
-    var eh = document.querySelector('input[name=RadioButtons10]:checked').value;
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("elecbillval").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","energy.php?resi=" +resi + "&ac=" +ac + "&uh=" +uh + "&eh=" +eh, true);
-        xmlhttp.send();
-  }
-  
-  function phonecost(){   
-  var data = document.querySelector('input[name=RadioButtons1]:checked').value;
-  var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
-	var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
-    //var phonetotalbill = parseInt(datacost) + parseInt(intercal);
-    //document.getElementById("billval").innerHTML = phonetotalbill+'$';
-    if (plan == 1 ) {
-    var contract=0;
- }
-  else {
-    var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
-  }
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("billval").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","phonedb.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
-        xmlhttp.send();
-  }
-  
-  function viewdata() {
-  var data = document.querySelector('input[name=RadioButtons1]:checked').value;
-  var intercal = document.querySelector('input[name=RadioButtons2]:checked').value;
-  var plan = document.querySelector('input[name=RadioButtons17]:checked').value;
-    //var phonetotalbill = parseInt(datacost) + parseInt(intercal);
-    //document.getElementById("billval").innerHTML = phonetotalbill+'$';
-      if (plan == 1 ) {
-    var contract=0;
-  }
-  else {
-    var contract = document.querySelector('input[name=RadioButtons18]:checked').value;
-  }
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("bestplansval").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","phoneplans.php?data=" +data + "&intercal=" +intercal + "&plan=" +plan + "&contract=" +contract, true);
-        xmlhttp.send();
-  }
- function viewdata1() {
- var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("bestplansval1").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","internetplan.php?internet=" +internet, true);
-        xmlhttp.send();
- }
-   function viewdata2() {
-    var resi = document.querySelector('input[name=RadioButtons7]:checked').value;
-    var ac = document.querySelector('input[name=RadioButtons8]:checked').value;
-    var uh = document.querySelector('input[name=RadioButtons9]:checked').value;
-    var eh = document.querySelector('input[name=RadioButtons10]:checked').value;
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("bestplansval2").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","energyplans.php?resi=" +resi + "&ac=" +ac + "&uh=" +uh + "&eh=" +eh, true);
-        xmlhttp.send();
-  }
-
-function intbill() {
-var internet = document.querySelector('input[name=RadioButtons3]:checked').value;
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("intbillval").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","internetdb.php?q=" +internet, true);
-
-        xmlhttp.send();
-  
-  }
-function waterbill(){
-  var residentnum = document.querySelector('input[name=RadioButtons6]:checked').value;
-  var dw = document.querySelector('input[name=RadioButtons11]:checked').value;
-  var wm = document.querySelector('input[name=RadioButtons12]:checked').value;
-  var ec = document.querySelector('input[name=RadioButtons13]:checked').value;
-  
-  if (dw == 0 ) {
-    var dwf=0;
-  }
-
-  else {
-  var dwf = document.querySelector('input[name=RadioButtons14]:checked').value;
-}
-  if (wm == 0 ) {
-    var wmf=0;
-  }
-  
-  else {
-  var wmf = document.querySelector('input[name=RadioButtons15]:checked').value;
-}
-  if (ec == 0 ) {
-    var ech=0;
-  }
-  else {
-  var ech = document.querySelector('input[name=RadioButtons16]:checked').value;
-}
-      if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } 
-      xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("waterbillval").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","waterdb.php?residentnum=" +residentnum + "&dw=" +dw + "&wm=" +wm + "&ec=" +ec + "&dwf=" +dwf + "&wmf=" +wmf + "&ech=" +ech, true);
-        xmlhttp.send();
-}
-
-$(function() {
-  $( "#RadioButtons7" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons8" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons9" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons10" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons11" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons12" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons13" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons14" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons15" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons16" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons17" ).buttonset(); 
-});
-$(function() {
-  $( "#RadioButtons18" ).buttonset(); 
-});
-  function calculatorDrag() {
-      $("#costFont").css('background-color', "white");
-      $("#stuSup").css('background-color', "white");
-      $("#preSup").css('background-color', "white");
-  }
-</script>
-<style> 
-.none { display:none; }, 
-.showDIV { display:block; } 
-</style>  
-<style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-</style>
 </body>
 </html> 
