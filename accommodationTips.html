@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>First Steps in Mel -- Melbourne living area</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <style type="text/css">
+    .titleDiv {
+        margin-top: 50px;
+        text-align: left;
+        margin-left: 50px;
+
+    }
+
+    .title {
+        font-size: 4rem;
+        color: #444A4E;
+        font-weight: 700
+    }
+
+    .imageStu {
+        width: 500px;
+        margin-left: 60px;
+        border-radius: 20px;
+    }
+
+    .imageDiv {
+        width: 900px;
+    }
+
+    .main {
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    .content_body {
+        font-size: 2rem;
+        font-family: MetaSerif-Book, Georgia, "Times New Roman", Times, serif;
+        line-height: 1.5;
+    }
+
+    .main .content_body .subTitle {
+        font-size: 2.5rem;
+        font-family: MetaSerif-Book, Georgia, "Times New Roman", Times, serif;
+        font-weight: bolder;
+    }
+
+    .country {
+        display: block;
+        font-weight: bold;
+    }
+
+    #btn{
+        background-color: rgb(78,191,233);
+        border-color: rgb(78,191,233);
+        font-size: 16px;
+        color: white; 
+        border-radius: 5px; 
+        margin: 0;
+        width: 45px;
+        height: 120px;
+        font-weight: bolder;
+        position: fixed;
+        right: -10px;
+        top: 40%;
+        opacity: 0.5;
+    }
+    ul li{
+        font-size: 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-wrapper" style="position: fixed; top: 12px;left: 10px;right: 10px;z-index: 99">
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white; color: white; border: 1px solid rgb(224,227,230);margin-top: -20px;box-shadow: 4px 4px 20px lightblue;">
+                <div class="container">
+                    <div class="navbar-header" style="height: 62px;">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" value="click here to start" style="background-color: black; width: 40px;height: 40px; text-align: center;">
+                        </button>
+                        <a class="navbar-brand active" href="http://www.firststepsinmel.ml/"><img src="img/webLogo3.png" style="display: inline; height: 43px; margin-top: -10px;">
+                            <span class="hidden-sm-down hidden-xs" style="font-family: 'Arial Black';font-size: 24px;color:black; height: 20px; line-height: 20px;margin-left: 10px;">First Steps in Melbourne</span></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse col-md-5" style="margin-top: 3px;">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown" id="costDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="costFont"><span class="caret"></span>&nbsp;&nbsp;Living Cost Calculator</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Calculator</a></li>
+                                    <li><a href="Bills.php">Other expenses</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown" id="subSupDrag" onclick="calculatorDrag()">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: black;" id="stuSup"><span class="caret"></span>&nbsp;&nbsp;Student Support</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Find a Suburb</a></li>
+                                    <li><a href="TipsList.html">Guidance</a></li>
+                                </ul>
+                            </li>
+                           <li><a href="comparison.html" id="comparison" onmousemove="compareMove()" style="color: black;">Comparison</a></li>
+                            <li><a href="prediction.php" id="prediction" onmousemove="predictionMove()" style="color: black;">Prediction</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="display: none;"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="introduction.php">Living Cost Calculator</a></li>
+                                    <li><a href="https://www.firststepsinmel.ml/shiny/easyaussie/find_a_suburb/">Student Support</a></li>
+                                    <li><a href="comparison.html">Comparison</a></li><li><a href="prediction.php" style="color: black">Prediction</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="total container" style="width: 70%">
+        <section class="titleDiv col-md-8 col-xs-12 col-lg-12" style="width: 90%">
+            <span class="title">Melbourne Living Area</span>
+            <br>
+            <br>
+        </section>
+
+        <section class="imageDiv">
+
+            <img class="imageStu" src="img/aaaa.jpg">
+            
+        </section>
+        <br>
+        <section class="main">
+            <article class="content_body">
+                <p class="article">
+                    Melbourne had been voted the world’s most livable city from 2011 to 2018. Even in 2019, Melbourne loses world’s most livable city, but it still is a very attractive city with fantastic quality of life. The local coffee, music, arts, sport, food and their lifestyle always share Melbourne’s passions with the people from all over the world. The lifestyle and culture will make you never want to leave this beautiful city.
+                </p><br>
+                <p class="subTitle">
+                    Multicultural Melbourne
+                </p><br>
+                <p class="article">
+                    Melbourne experiences comparatively high levels of migrant integration to the other capital cities, however some foreign ethnic groups are associated with the suburb in which they first settled:
+                                  
+                    <span class="country">Afghan</span> with Broadmedows, Dandenong, Dandenong South, Hallam and Hampton Park
+                    <span class="country">Bosnian</span> with Noble Park North, Endeavour Hills, Dandenong and St Albans
+                    <span class="country">British</span> with Mount Eliza, Mornington,Berwick, Beaconsfield, Officer, Mount Martha, Safety Beach and Bangholme (Mornington Peninsula)
+                    <span class="country">Burmese</span> with Albion, Cairnlea and Sunshine North
+                    <span class="country">Cambodian</span> with Springvale South and Springvale
+                    <span class="country">Chinese</span> with CBD, Doncaster East, Doncaster, Clayton, Sunshine North, Glen Waverley, Springvale and Box Hill
+                    <span class="country">Croatian</span> with Altona Meadows, Maribyrnong, Noble Park, Clayton, Dandenong, Noble Park North and North Geelong
+                    <span class="country">Dutch</span> with Ferntree Gully, Park Orchards, Ringwood and Mount Eliza
+                    <span class="country">Egyptians</span> with Broadmeadows, Campbellfield, Taylors Hill and Sydenham
+                    <span class="country">Eritrea</span> with Albanvale and Cairnlea
+                    <span class="country">Ethiopian</span> with Caroline Springs, Sydenham and Burnside
+                    <span class="country">Fijians</span> with Hampton Park and Endeavour Hills
+                    <span class="country">Filipino</span> with Caroline Springs, Burnside, and Cairnlea
+                    <span class="country">French</span> with Caulfield North, Elsternwick, St Kilda East, Glen Iris, Cheltenham and Noble Park North
+                    <span class="country">Greek</span>community of Melbourne with Preston, Thornbury, Northcote, Thomastown, Northcote, Oakleigh, Oakleigh South, Oakleigh East, Clayton South, Noble Park, Rye, Rosebud and interspersed in Northern and Eastern Suburbs
+                    <span class="country">Hungarian</span> with St Kilda East, Caulfield North and Caulfield
+                    <span class="country">ietnamese</span>V with Kings Park, St Albans, Albanvale, Cairnlea, Sunshine North, Sunshine West, Ardeer and Springvale
+                    <span class="country">Indians</span>with Tarneit, Truganina, Dandenong, Clayton, Glen Waverley, Berwick, Beaconsfield, Officer, Laverton, Endeavour Hills, Hampton Park, Narre Warren North Western Suburbs, and South Western Suburbs
+                    <span class="country">Indonesian</span> with CBD and Clayton
+                    <span class="country">Iranian</span> with Doncaster East and Broadmeadows
+                    <span class="country">Iraqis</span> with Roxburgh Park, Coolaroo, Broadmeadows Meadow Heights, Craigieburn and Campbellfield
+                    <span class="country">Irish</span> with Elwood, St Kilda and St Kilda West.
+                    <span class="country">Italian Australians</span>with Carlton, Brunswick, Fawkner, Thomastown, Coburg, Pascoe Vale, Bulleen, Mill Park, Keilor East, Rosebud and Rye and interspersed in the Northwestern and Western suburbs
+                    <span class="country">Japanese</span> community of Melbourne
+                    <span class="country">Jewish</span> with North Caulfield, Caulfield, St Kilda East and South Eastern Suburbs
+                    <span class="country">Koreans</span> with Glen Waverley, Springvale and CBD
+                    <span class="country">Lebanese</span> with Dallas, Craigieburn, Roxburgh Park, Meadow Heights, Broadmeadows, Campbellfield and Fawkner
+                    <span class="country">Macedonian</span> with Thomastown, Lalor, Reservoir, Preston, South Morang and St Albans
+                    <span class="country">Malaysian</span> with CBD, Glen Waverley, Doncaster East, Knox City and Box Hill
+                    <span class="country">Maltese</span> with Altona North, Altona Meadows, Tarneit, Sunshine, St Albans and Airport West
+                    <span class="country">Maori</span> with Hampton Park, Narre Warren South and Tarneit
+                    <span class="country">Middle Eastern</span> with North Western Suburbs
+                    <span class="country">Pakistani</span> with Broadmeadows, Campbellfield Doveton, Dandenong and St Albans
+                    <span class="country">Polish</span> with Caulfield North, Caulfield South, Elsternwick and Bentleigh
+                    <span class="country">Russian</span>with Carnegie, Caulfield North, Caulfield South, Bentleigh and Bentleigh East
+                    <span class="country">Samoan</span> with Cairnlea and Campbellfield
+                    <span class="country">Scottish</span> with Mornington, Mount Martha, Mount Eliza and Frankston South (Mornington Peninsula)
+                    <span class="country">Serbs</span> with Caroline Springs, St Albans, Williams Landing, Hampton Park and Endeavour Hills
+                    <span class="country">Somali and Habesha</span> with Broadmeadows and Heidelberg West
+                    <span class="country">South African</span> with Caulfield North and Caulfield South
+                    <span class="country">Spanish</span> with Fitzroy, Collingwood, Kensington and Flemington
+                    <span class="country">Sri Lankans</span> with Glen Waverley, Endeavour Hills, Craigieburn, Dandenong North, and Dandenong
+                    <span class="country">Sub Saharan African</span> with Caroline Springs, Sydenham and Burnside
+                    <span class="country">Sudanese</span> with Caroline Springs, Sydenham, Broadmeadows and Wyndham Vale
+                    <span class="country">Syrians</span> with Roxburgh Park, Coolaroo, Broadmeadows Meadow Heights, Craigieburn and Campbellfield
+                    <span class="country">Thai</span> with CBD and Sunshine North
+                    <span class="country">Turkish</span> with Broadmeadows, Meadow Heights, Craigieburn, Roxburgh Park, Coolaroo, Dallas and Attwood
+
+                    <br>
+                    For more information: <a href="https://en.wikipedia.org/wiki/Demographics_of_Melbourne">https://en.wikipedia.org/wiki/Demographics_of_Melbourne</a>
+                </p>
+
+        </section>
+         
+    </div>
+</body>
+<script type="text/javascript">
+function calculatorDrag() {
+    $("#costFont").css('background-color', "white");
+    $("#stuSup").css('background-color', "white");
+    $("#preSup").css('background-color', "white");
+}
+function btnAction(){
+  $("#btn").css('right','0px');
+}
+function btnOut(){
+  $("#btn").css('right','-10px');
+}
+
+function compareMove(){
+    $("#comparison").html('Compare cost index');
+    $("#comparison").mouseout(function(){
+        $("#comparison").html('Comparsion');
+        })
+    }
+
+  function predictionMove(){
+      $("#prediction").html('Cost Prediction');
+      $("#prediction").mouseout(function(){
+          $("#prediction").html('Prediction');
+      })
+  }
+
+</script>
+
+</html>

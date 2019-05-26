@@ -541,9 +541,9 @@
     <br>
 <div class="container-fluid" style="width: 70%;background-color: white; border-radius: 20px; box-shadow: 4px 4px 20px lightblue; overflow: auto; text-align: center;">
 <br>
-<div style="text-align: center; font-size: 25px; font-family: Arial Black; font-weight: bold; font-variant: small-caps;">Calculate the approximate cost of monthly bills</div>
+<div style="text-align: center; font-size: 25px; font-family: Arial Black; font-weight: bold; font-variant: small-caps;font-color: Blue;">Calculate the approximate cost of monthly bills</div>
 				  <div class="tab" style="height:50px; border-radius: 10px;box-shadow: 4px 4px 20px lightblue;">
-                    <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black; display: block;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
+                    <button style="height:50px; width: 25%;font-weight: bolder; font-family: Arial Black; display: inline-block;" class="tablinks" onclick="openEvent(event, 'Phone')">Phone</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Internet')">Internet</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Energy')">Energy</button>
                     <button style="height:50px; width: 25%; font-weight: bolder; font-family: Arial Black;" class="tablinks" onclick="openEvent(event, 'Water')">Water</button>
